@@ -1,6 +1,8 @@
 const Sales = require('../models/salesModel');
-const { nanoid } = require('nanoid');
-
+import('nanoid').then(({ nanoid }) => {
+    console.log(nanoid());
+  });
+  
 const createSales = async (req, res) => {
     try {
         const {email, date, totalSales, totalCustomers } = req.body;
