@@ -71,3 +71,5 @@ app.listen(PORT, () => {
 process.on('unhandledRejection', (err) => {
     console.error('Unhandled Promise Rejection:', err);
 });
+
+module.exports=connectDB;
