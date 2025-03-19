@@ -11,7 +11,7 @@ const app = express();
 
 // Enable CORS
 app.use(cors({
-    origin: ['http://localhost:5173', 'http://localhost:5174'],
+    origin: ['https://zippy-elf-922637.netlify.app/'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization']
