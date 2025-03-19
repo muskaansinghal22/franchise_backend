@@ -102,6 +102,8 @@ const loginUser = async (req, res) => {
         const { username, password } = req.body;
         const franchiseUser = await FranchiseUser.findOne({ username });
 
+        const isAdmin = username === "muskaanyayy@gmail.com";
+
         if (!franchiseUser) {
             return res.status(401).json({
                 success: false,
@@ -129,7 +131,8 @@ const loginUser = async (req, res) => {
             message: 'Login successful',
             token,
             franchiseId: franchiseUser._id,
-            username: franchiseUser.username
+            username: franchiseUser.username,
+            isAdmin: isAdmin
         });
     } catch (error) {
         console.error('Login error:', error);
