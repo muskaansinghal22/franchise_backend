@@ -38,7 +38,6 @@ const connectDB = async () => {
         console.log('Connected to MongoDB Atlas');
     } catch (error) {
         console.error('MongoDB connection error:', error);
-        setTimeout(connectDB, 5000);
     }
 };
 
