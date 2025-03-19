@@ -11,11 +11,11 @@ const app = express();
 
 // Enable CORS
 app.use(cors({
-    origin: ['https://zippy-elf-922637.netlify.app/'],
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-}));
+    origin: 'https://zippy-elf-922637.netlify.app', // Your Netlify URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+  }));
 
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ extended: true, limit: '50mb' }));
